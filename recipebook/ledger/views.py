@@ -11,4 +11,4 @@ class RecipeList(ListView):
 
 class Recipe(DetailView):
     model = Recipe
-    template_name = 'recipe.html'
+    template_name = 'recipe.html' 
