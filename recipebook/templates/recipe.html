@@ -4,10 +4,10 @@
     <title>Recipes List</title>
 </head>
 <body>
-    <h1>Recipe Book</h1>
+    <h1>{{object.name}}</h1>
     <ul>
-        {% for recipe in object_list %}
-        <li><a href="{{recipe.get_absolute_url}}"> {{recipe.name}} </a></li>
+        {% for ingredient in object.ingredients.all %}
+        <li>{{ingredient.ingredient.name}}</li>
         {% endfor %}
     </ul>
 </body>

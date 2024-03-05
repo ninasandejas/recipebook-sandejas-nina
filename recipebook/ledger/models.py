@@ -5,19 +5,19 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
-        return '{}' (self.name)
+        return '{}'.format(self.name)
     
     def get_absolute_url(self):
-        return reverse('ledger:recipe', args=[str(self.name)])
+        return reverse('ledger:recipe', args=[self.pk])
 
 class Recipe(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
-        return '{}' (self.name)
+        return '{}'.format(self.name)
     
     def get_absolute_url(self):
-        return reverse('ledger:recipe', args=[str(self.name)])
+        return reverse('ledger:recipe', args=[self.pk])
     
 class RecipeIngredient(models.Model):
     quantity = models.CharField(max_length=100)
@@ -30,5 +30,5 @@ class RecipeIngredient(models.Model):
     recipe = models.ForeignKey(
         Recipe,
         on_delete=models.CASCADE,
-        related_name = 'ingredient'
+        related_name = 'ingredients'
     )
