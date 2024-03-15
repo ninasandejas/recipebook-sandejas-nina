@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+
 from .models import Recipe
-from django.contrib.auth.decorators import login_required
 
 
 
