@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Recipes List</title>
+    <title>Recipe</title>
 </head>
 <body>
     <h1>{{object.name}}</h1>
+    <h6>Details:</h6>
+    <p> <b>Author:</b> {{author}} </p>
+    <p> <b>Created:</b> {{created_on}} </p>
+    <p> <b>Updated:</b> {{updated_on}} </p>
+    <h4>Ingredients:</h4>
     <ul>
         {% for ingredient in object.ingredients.all %}
         <li>{{ingredient.ingredient.name}}</li>
