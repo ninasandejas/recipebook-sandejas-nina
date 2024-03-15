@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 </head>
+
 <header>
     <h1>Recipe Book</h1>
     {% if user.is_authenticated %}
@@ -12,9 +13,10 @@
     </form>
     {% else %}
     <p><b>Get started!</b></p>
-        <a href="{% url 'login' %}">Login</a>
     <a href="{% url 'login' %}">Login</a>
     {% endif %}
+</header>
+
 <body>
     {% block content %}{% endblock %}
 </body>
