@@ -3,9 +3,13 @@
 <head>
     <title>Recipe</title>
 </head>
+
+{% extends "base.html" %}
+{% block content %}
+
 <body>
     <h1>{{object.name}}</h1>
-    <h6>Details:</h6>
+    <h6>Details</h6>
     <p> <b>Author:</b> {{author}} </p>
     <p> <b>Created:</b> {{created_on}} </p>
     <p> <b>Updated:</b> {{updated_on}} </p>
@@ -16,4 +20,5 @@
         {% endfor %}
     </ul>
 </body>
+{% endblock %}
 </html>
